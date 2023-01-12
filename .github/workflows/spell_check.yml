@@ -34,7 +34,12 @@ jobs:
 
     - name: Run spell-check
       continue-on-error: true
-      run: python -m pyspelling
+      # save the output of the spell check in the step output
+      id: spell-check
+      run: |
+        python -m pyspelling
+        echo "::set-output name=stdout::$(cat stdout)"
+        echo "::set-output name=stderr::$(cat stderr)"
 
     # put the results in the comment of the pull request
     - name: Comment on pull request
