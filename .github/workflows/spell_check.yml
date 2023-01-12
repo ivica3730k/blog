@@ -1,6 +1,6 @@
 # This workflow will install PySpelling spell checker and its dependencies, then run it
 
-name: Test
+name: Proofread
 # on every pull request and updates
 on: [pull_request]
 
