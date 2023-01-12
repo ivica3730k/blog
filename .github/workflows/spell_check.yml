@@ -34,15 +34,16 @@ jobs:
 
     - name: Run spell-check
       continue-on-error: true
+      run: |
+        python -m pyspelling
       id: spell-check-output
-      run: python -m pyspelling || echo "Spell check done."
-    
+
     # echo the results to the console
     - name: Show results
       run: |
         echo "Spell check results:"
-        echo "${{ steps.spell-check-output.outputs.stdout }}"
-        echo "${{ steps.spell-check-output.outputs.stderr }}"
+        echo "${{ steps.spell-check-output.outputs.stdout}}"
+        echo "${{ steps.spell-check-output.outputs.stderr}}"
 
     # put the results in the comment of the pull request
     - name: Comment on pull request
