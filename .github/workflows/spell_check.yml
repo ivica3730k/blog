@@ -34,8 +34,7 @@ jobs:
 
     - name: Run spell-check
       continue-on-error: true
-      run: |
-        python -m pyspelling
+      run: python -m pyspelling
 
     # put the results in the comment of the pull request
     - name: Comment on pull request
