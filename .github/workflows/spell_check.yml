@@ -1,0 +1,42 @@
+# This workflow will install PySpelling spell checker and its dependencies, then run it
+
+name: Test
+# on every pull request and updates
+on: [pull_request]
+
+jobs:
+  spell-check:
+    name: Spell check code and documents
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v2
+
+    - name: Set up Python
+      uses: actions/setup-python@v2
+      with:
+        python-version:  3.8
+
+    - name: Install dependencies
+      run: |
+        sudo apt-get install --assume-yes aspell aspell-en
+        python -m pip install --upgrade pip setuptools
+        python -m pip install pyspelling
+
+    - name: Run spell-check
+      run: |
+        python -m pyspelling
+
+    # put the results in the comment of the pull request
+    - name: Comment on pull request
+      uses: peter-evans/create-or-update-comment@v1
+      with:
+        issue-number: ${{ github.event.pull_request.number }}
+        body: |
+          ## Spell check results
+          ```
+          ${{ steps.spell-check.outputs.stdout }}
+          ```
+        
