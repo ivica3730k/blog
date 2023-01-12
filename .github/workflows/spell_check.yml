@@ -35,7 +35,7 @@ jobs:
     - name: Run spell-check
       continue-on-error: true
       run: |
-        echo "FOO=$(pyspelling -n markdown)" >> $GITHUB_ENV
+        echo FOO="$(pyspelling -n markdown)" >> $GITHUB_ENV
       id: spell-check-output
 
     # echo the results to the console

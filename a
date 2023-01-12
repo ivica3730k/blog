@@ -1,0 +1,35 @@
+FOO=Misspelled words:
+<htmlcontent> projects/markdown-folder-to-html/README.md: html>body>p
+--------------------------------------------------------------------------------
+github
+html
+https
+joakin
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<htmlcontent> projects/markdown-folder-to-html/README.md: html>body>ul>li
+--------------------------------------------------------------------------------
+html
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<htmlcontent> projects/markdown-folder-to-html/README.md: html>body>ul>li
+--------------------------------------------------------------------------------
+html
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<htmlcontent> projects/markdown-folder-to-html/README.md: html>body>ul>li
+--------------------------------------------------------------------------------
+html
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<htmlcontent> projects/markdown-folder-to-html/README.md: html>body>p
+--------------------------------------------------------------------------------
+CICD
+js
+--------------------------------------------------------------------------------
+
+!!!Spelling check failed!!!
