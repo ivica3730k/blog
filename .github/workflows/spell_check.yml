@@ -34,12 +34,15 @@ jobs:
 
     - name: Run spell-check
       continue-on-error: true
-      # save the output of the spell check in the step output
       id: spell-check-output
+      run: python -m pyspelling
+    
+    # echo the results to the console
+    - name: Show results
       run: |
-        python -m pyspelling || true
-        echo "::set-output name=stdout::$(cat stdout)"
-        echo "::set-output name=stderr::$(cat stderr)"
+        echo "Spell check results:"
+        echo "${{ steps.spell-check-output.outputs.stdout }}"
+        echo "${{ steps.spell-check-output.outputs.stderr }}"
 
     # put the results in the comment of the pull request
     - name: Comment on pull request
@@ -48,13 +51,10 @@ jobs:
         issue-number: ${{ github.event.pull_request.number }}
         body: |
           ## Spell check results
-          ```
+          
           ${{ steps.spell-check-output.outputs.stdout }}
           ${{ steps.spell-check-output.outputs.stderr }}
           
-
-          Ivica
-          ```
     # # if the spell check fails, deny the pull request
     # - name: Deny pull request
     #   if: steps.spell-check.outcome == 'failure'
