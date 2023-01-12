@@ -35,15 +35,14 @@ jobs:
     - name: Run spell-check
       continue-on-error: true
       run: |
-        python -m pyspelling
+        echo "FOO=$(pyspelling -n markdown)" >> $GITHUB_ENV
       id: spell-check-output
 
     # echo the results to the console
     - name: Show results
       run: |
         echo "Spell check results:"
-        echo "${{ steps.spell-check-output.outputs.stdout}}"
-        echo "${{ steps.spell-check-output.outputs.stderr}}"
+        echo ${{ env.FOO }}
 
     # put the results in the comment of the pull request
     - name: Comment on pull request
@@ -52,9 +51,9 @@ jobs:
         issue-number: ${{ github.event.pull_request.number }}
         body: |
           ## Spell check results
-          
-          ${{ steps.spell-check-output.outputs.stdout }}
-          ${{ steps.spell-check-output.outputs.stderr }}
+          ```
+          ${{ env.FOO }}
+          ```
           
     # # if the spell check fails, deny the pull request
     # - name: Deny pull request
