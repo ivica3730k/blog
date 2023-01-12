@@ -46,6 +46,7 @@ jobs:
           ## Spell check results
           ```
           ${{ steps.spell-check.outputs.stdout }}
+          ${{ steps.spell-check.outputs.stderr }}
           ```
     # # if the spell check fails, deny the pull request
     # - name: Deny pull request
