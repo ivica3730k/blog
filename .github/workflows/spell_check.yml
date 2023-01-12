@@ -35,25 +35,32 @@ jobs:
     - name: Run spell-check
       continue-on-error: true
       run: |
-        echo FOO="$(pyspelling -n markdown)" >> $GITHUB_ENV
+        pyspelling -n markdown >> spell-check-output.txt
       id: spell-check-output
-
-    # echo the results to the console
-    - name: Show results
-      run: |
-        echo "Spell check results:"
-        echo ${{ env.FOO }}
-
-    # put the results in the comment of the pull request
-    - name: Comment on pull request
-      uses: peter-evans/create-or-update-comment@v1
+    
+    - name: Upload spell-check results
+      uses: actions/upload-artifact@v2
       with:
-        issue-number: ${{ github.event.pull_request.number }}
-        body: |
-          ## Spell check results
-          ```
-          ${{ env.FOO }}
-          ```
+        name: spell-check-results
+        path: spell-check-output.txt
+        
+
+    # # echo the results to the console
+    # - name: Show results
+    #   run: |
+    #     echo "Spell check results:"
+    #     echo ${{ env.FOO }}
+
+    # # put the results in the comment of the pull request
+    # - name: Comment on pull request
+    #   uses: peter-evans/create-or-update-comment@v1
+    #   with:
+    #     issue-number: ${{ github.event.pull_request.number }}
+    #     body: |
+    #       ## Spell check results
+    #       ```
+    #       ${{ env.FOO }}
+    #       ```
           
     # # if the spell check fails, deny the pull request
     # - name: Deny pull request
