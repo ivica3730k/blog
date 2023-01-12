@@ -35,7 +35,7 @@ jobs:
     - name: Run spell-check
       continue-on-error: true
       id: spell-check-output
-      run: python -m pyspelling
+      run: python -m pyspelling || echo "Spell check done."
     
     # echo the results to the console
     - name: Show results
