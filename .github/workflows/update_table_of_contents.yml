@@ -1,0 +1,24 @@
+name: Update Table of Contents on Push to Main
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v2
+
+    - name: Run Python Command
+      run: python3 migrate_table_of_contents.py
+
+    - name: Commit README
+      run: git add README.md && git commit -m "Update root README with a new table of contents"
+
+    - name: Push changes
+      run: git push origin main
