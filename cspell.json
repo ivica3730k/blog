@@ -2,10 +2,11 @@
     "version": "0.2",
     "ignorePaths": [],
     "words": [
-        "automaticcally",
-        "cicd"
+        "cicd",
+        "readme",
+        "md",
+        "markdown"
     ],
     "ignoreWords": [],
     "import": [],
-    "cSpell.language": "en-GB"
 }
