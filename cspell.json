@@ -1,0 +1,11 @@
+{
+    "version": "0.2",
+    "ignorePaths": [],
+    "words": [
+        "automaticcally",
+        "cicd"
+    ],
+    "ignoreWords": [],
+    "import": [],
+    "cSpell.language": "en-GB"
+}
