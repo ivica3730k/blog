@@ -1,5 +1,10 @@
 name: Update Table of Contents on Push to Main
 
+permissions:
+  pull-requests: write
+  issues: write
+  repository-projects: write
+  
 on:
   push:
     branches:
