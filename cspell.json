@@ -4,9 +4,10 @@
     "words": [
         "cicd",
         "readme",
-        "md",
-        "markdown"
+        "readme",
+        "markdown",
+        "md"
     ],
     "ignoreWords": [],
-    "import": [],
+    "import": []
 }
