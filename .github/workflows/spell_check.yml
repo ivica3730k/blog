@@ -32,6 +32,14 @@ jobs:
         python -m pip install --upgrade pip setuptools
         python -m pip install pyspelling
 
+    - name: Migrate custom dictionary
+      run: |
+        python3 migrate_dictionary.py
+
+    - name: Echo custom dictionary
+      run: |
+        cat .custom-dictionary.txt
+
     - name: Run spell-check
       continue-on-error: true
       run: |
