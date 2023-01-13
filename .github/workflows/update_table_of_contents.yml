@@ -4,7 +4,7 @@ permissions:
   pull-requests: write
   issues: write
   repository-projects: write
-  
+
 on:
   push:
     branches:
@@ -24,7 +24,7 @@ jobs:
 
     - name: Set up Git
       run: |
-        git config user.name github-actions
-        git config user.email github-actions@github.com
+        git config user.name ivica3730k
+        git config user.email ivica-matic@outlook.com
         git add README.md && git commit -m "Update root README with a new table of contents"
         git push origin main
