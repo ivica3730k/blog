@@ -2,7 +2,7 @@
 [Previous (Home)](../../README.md)
 
 <!-- Specify the project name, use Pascal Case with spaces. For example, "2M Ham Radio Amplifier". -->
-# Markdown Folder to HTML
+# Markdown Folder to HTML for Blog
 A reusable workflow which can create docs-style html folder out of folder.
 
 <!-- Short description of the project and what it is. -->
