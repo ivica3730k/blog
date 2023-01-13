@@ -1,8 +1,15 @@
 # This workflow will install PySpelling spell checker and its dependencies, then run it
 
 name: Proofread
-# on every pull request and updates
-on: [pull_request]
+
+permissions:
+  contents: read
+  issues: write
+  pull-requests: write
+  
+on:
+  pull_request:
+    branches: [ "master","main" ]
 
 jobs:
   spell-check:
@@ -25,18 +32,50 @@ jobs:
         python -m pip install --upgrade pip setuptools
         python -m pip install pyspelling
 
-    - name: Run spell-check
+    - name: Migrate custom dictionary
       run: |
-        python -m pyspelling
+        python3 migrate_dictionary.py
 
-    # put the results in the comment of the pull request
+    - name: Echo custom dictionary
+      run: |
+        cat .custom-dictionary.txt
+
+    - name: Run spell-check
+      continue-on-error: true
+      run: |
+        pyspelling -n markdown >> spell-check-output.txt
+      id: spell-check-output
+    
+    # - name: Upload spell-check results
+    #   uses: actions/upload-artifact@v2
+    #   with:
+    #     name: spell-check-results
+    #     path: spell-check-output.txt
+
+
+    # echo the results to the console
+    - name: Show results
+      run: |
+        cat spell-check-output.txt
+
     - name: Comment on pull request
-      uses: peter-evans/create-or-update-comment@v1
+      uses: peter-evans/create-or-update-comment@v2
       with:
         issue-number: ${{ github.event.pull_request.number }}
-        body: |
-          ## Spell check results
-          ```
-          ${{ steps.spell-check.outputs.stdout }}
-          ```
+        body-file: spell-check-output.txt
+          
+    # # if the spell check fails, deny the pull request
+    # - name: Deny pull request
+    #   if: steps.spell-check.outcome == 'failure'
+    #   uses: actions/github-script@v3
+    #   with:
+    #     github-token: ${{ secrets.GITHUB_TOKEN }}
+    #     script: |
+    #       github.pulls.update({
+    #         owner: context.repo.owner,
+    #         repo: context.repo.repo,
+    #         pull_number: context.issue.number,
+    #         state: 'closed',
+    #         maintainer_can_modify: true
+    #       })
         

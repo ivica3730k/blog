@@ -1,0 +1,13 @@
+{
+    "version": "0.2",
+    "ignorePaths": [],
+    "words": [
+        "cicd",
+        "readme",
+        "readme",
+        "markdown",
+        "md"
+    ],
+    "ignoreWords": [],
+    "import": []
+}
