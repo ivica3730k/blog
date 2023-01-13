@@ -1,27 +1,7 @@
 matrix:
-
 - name: markdown
+  pipeline:
+  - pyspelling.filters.text
   sources:
   - '**/*.md'
-  aspell:
-    lang: en
-  dictionary:
-    wordlists:
-    - '.custom-dictionary.txt'
-  pipeline:
-  - pyspelling.filters.markdown:
-      markdown_extensions:
-      - markdown.extensions.extra:
-  - pyspelling.filters.html:
-      comments: false
-      attributes:
-      - title
-      - alt
-      ignores:
-      - :matches(code, pre, samp, kbd, var)
-      # In HTML:
-      # <code>  Defines a piece of computer code
-      # <pre>   Defines pre-formatted text
-      # <samp>  Defines sample output from a computer program
-      # <kbd>   Defines keyboard input
-      # <var>   Defines a variable
+  default_encoding: utf-8
