@@ -27,7 +27,7 @@ if __name__ == "__main__":
                 print(f"title: {title}")
                 description = lines[index_of_title+1]
                 print(f"description: {description}")
-            toc_table += f"""| [{title}]({root}/README.md) | {description} |"""
+            toc_table += f"""| [{title}]({root}/README.md) | {description} |\n"""
 
     main_readme = open("README.md").read()
     main_readme_lines = main_readme.splitlines()
@@ -45,8 +45,7 @@ if __name__ == "__main__":
         main_readme_lines[:start_index_of_toc])
     contents_after_toc_table = "\n".join(main_readme_lines[end_index_of_toc:])
 
-    new_readme = f"""{toc_table}
-    """
+    new_readme = f"""{contents_before_toc_table}{toc_table}{contents_after_toc_table}"""
 
     with open("README.md", "w") as f:
         f.write(new_readme)
