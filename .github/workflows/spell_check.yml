@@ -43,13 +43,12 @@ jobs:
       with:
         name: spell-check-results
         path: spell-check-output.txt
-        
 
-    # # echo the results to the console
-    # - name: Show results
-    #   run: |
-    #     echo "Spell check results:"
-    #     echo ${{ env.FOO }}
+
+    # echo the results to the console
+    - name: Show results
+      run: |
+        cat spell-check-output.txt
 
     # # put the results in the comment of the pull request
     # - name: Comment on pull request
