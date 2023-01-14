@@ -45,7 +45,8 @@ jobs:
         git config user.email github-actions[bot]@users.noreply.github.com
 
     - name: Add changes and commit
-      git add . && git commit -m "Rendered into HTML folder" || true
+      run: 
+        git add . && git commit -m "Rendered into HTML folder" || true
       
     - name: Push changes
       run: | 
