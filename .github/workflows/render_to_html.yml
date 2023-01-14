@@ -24,8 +24,10 @@ jobs:
     - name: Go one folder back and convert to html
       run: |
         cd ..
-        pwd
-        ls
+        markdown-folder-to-html ./potential_projects_ideas
+        mv _potential_projects_ideas potential_projects_ideas
+        cd potential_projects_ideas
+        mv _potential_projects_ideas html
 
     - name: Set up Git
       run: |
