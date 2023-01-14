@@ -30,6 +30,9 @@ jobs:
     - name: Render into HTML folder
       run: markdown-folder-to-html html
 
+    - name: Move all from html folder back
+      run: mv html/* .
+
     - name: Remove html folder
       run: rm -rf html
 
