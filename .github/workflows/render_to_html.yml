@@ -21,9 +21,8 @@ jobs:
     - name: Install dependencies
       run: npm install -g markdown-folder-to-html
       
-    - name: Make docs folder and move everything in there
-      run: mkdir html && mv * ./html || true
-      continue-on-error: true
+    - name: Make html folder and copy everything in there
+      run: mkdir html && cp -r * ./html || true
 
     - name: PWD and ls
       run: pwd && ls
@@ -33,8 +32,14 @@ jobs:
       
     - name: Render to HTML
       run: markdown-folder-to-html ./html
-    - name: Move everything out of the folder
-      run: mv ./html/* . && rm -rf ./html
+      # this creates _html folder
+
+    - name: Remove html folder
+      run: rm -rf ./html
+
+    - name: List files in _html folder
+      run: ls ./_html
+
     - name: Rename _html folder to html
       run: mv ./_html ./html
 
