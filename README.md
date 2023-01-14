@@ -10,5 +10,6 @@ Open a issue with connected branch for each project idea. Then use the template 
 # Table of Contents
 | Project | Description |
 | --- | --- |
+| [Markdown Folder to HTML for Blog](./projects/1-markdown-folder-to-html-for-blog/README.md) | A reusable workflow which can create docs-style html folder out of folder. |
 <!--Table of contents end, do not remove this comment -->
     
