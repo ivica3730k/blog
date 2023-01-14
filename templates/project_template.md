@@ -7,6 +7,10 @@
 <!-- Short description of the project and what it is. -->
 ## Abstract and Introduction
 
+<!-- Did the project live section start-->
+## Did the project live?
+If you are reading this, then the answer is no. I have not started working on this project yet. I will update this section once I start working on it.
+
 <!-- List the projects that could be related to this project. For example, if this project is a 2M Ham Radio Amplifier, then the related projects could be a 70cm Ham Radio Amplifier and a 6M Ham Radio Amplifier. -->
 ### Related Projects
 
