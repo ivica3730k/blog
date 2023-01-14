@@ -25,13 +25,8 @@ jobs:
       run: npm install -g markdown-folder-to-html
 
     - name: Build HTML
-      run: |
-        rm -rf ./html
-        mkdir html
-        cp -r . ./html || true
-        markdown-folder-to-html ./html
-        rm -rf ./html
-        mv _html html
+      # execute build_docs.sh
+      run: ./build_docs.sh
 
 
     - name: Set up Git
