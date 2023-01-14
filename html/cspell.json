@@ -1,0 +1,21 @@
+{
+    "version": "0.2",
+    "ignorePaths": [],
+    "words": [
+        "cicd",
+        "readme",
+        "readme",
+        "markdown",
+        "md",
+        "html",
+        "repo",
+        "backend",
+        "frontend",
+        "AWS",
+        "Terraform",
+        "Docker"
+        
+    ],
+    "ignoreWords": [],
+    "import": []
+}

@@ -1,0 +1,671 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      /*! ADAPTED
+    Typeplate : Starter Kit
+    URL ........... http://typeplate.com
+    Version ....... 3.0.2
+    Github ........ https://github.com/typeplate/starter-kit
+    Authors ....... Dennis Gaebel (@gryghostvisuals) & Zachary Kain (@zakkain)
+    License ....... Creative Commmons Attribution 3.0
+    License URL ... https://github.com/typeplate/starter-kit/blob/master/license.txt
+    */
+
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6 {
+        text-rendering: optimizeLegibility;
+        line-height: 1;
+        margin-top: 0;
+        color: #222;
+      }
+
+      blockquote + figcaption cite {
+        display: block;
+        font-size: inherit;
+        text-align: right;
+      }
+
+      body {
+        word-wrap: break-word;
+      }
+
+      pre code {
+        word-wrap: normal;
+      }
+
+      body {
+        -webkit-hyphens: auto;
+        -ms-hyphens: auto;
+        hyphens: auto;
+        color: #444;
+      }
+
+      h1 {
+        font-size: 2em;
+        /* 2*16 = 32 */
+      }
+
+      h2 {
+        font-size: 1.5em;
+        /* 1.5*16 = 24 */
+      }
+
+      h3 {
+        font-size: 1.17em;
+        /* 1.17*16 = 18.72 */
+      }
+
+      h4 {
+        font-size: 1em;
+        /* 1*16 = 16 */
+      }
+
+      h5 {
+        font-size: 0.83em;
+        /* 0.83*16 = 13.28 */
+      }
+
+      h6 {
+        font-size: 0.75em;
+        /* 0.75*16 = 12 */
+      }
+
+      h1 {
+        margin: 2.42424rem 0 1.454544rem;
+      }
+
+      h2 {
+        margin: 2.0202rem 0 1.21212rem;
+      }
+
+      h3 {
+        margin: 1.61616rem 0 1rem;
+      }
+
+      h4 {
+        margin: 1.21212rem 0 1;
+      }
+
+      h5 {
+        margin: 0.80808rem 0;
+      }
+
+      h6 {
+        margin: 0.70707rem 0;
+      }
+
+      p {
+        margin: auto auto 1.5rem;
+      }
+
+      small {
+        font-size: 65%;
+      }
+
+      input,
+      abbr,
+      acronym,
+      blockquote,
+      code,
+      kbd,
+      q,
+      samp,
+      var {
+        -webkit-hyphens: none;
+        -ms-hyphens: none;
+        hyphens: none;
+      }
+
+      pre {
+        white-space: pre;
+      }
+
+      pre code {
+        white-space: -moz-pre-wrap;
+        white-space: pre-wrap;
+      }
+
+      code {
+        white-space: pre;
+        font-family: SF Mono, Consolas, Dejavu Sans Mono, Menlo, monospace;
+      }
+
+      abbr {
+        -webkit-font-variant: small-caps;
+        -moz-font-variant: small-caps;
+        -ms-font-variant: small-caps;
+        font-variant: small-caps;
+        font-weight: 600;
+        text-transform: lowercase;
+        color: gray;
+      }
+
+      abbr[title]:hover {
+        cursor: help;
+      }
+
+      /* FROM http://purecss.io/layouts/side-menu/  adapted to remove pure classes*/
+
+      body {
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+          Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
+          "Segoe UI Symbol";
+        color: #444;
+      }
+
+      img {
+        max-width: 100%;
+        height: auto;
+        display: block;
+        margin: auto;
+      }
+
+      code,
+      pre {
+        background-color: #f5f5f5;
+        color: #444;
+        border-radius: 2px;
+        text-shadow: 0px 1px 0px white;
+        box-shadow: 0 1px 1px rgba(0, 0, 0, 0.15);
+      }
+
+      pre code {
+        border: none;
+        box-shadow: none;
+      }
+
+      pre {
+        padding: 0.5em;
+      }
+
+      code {
+        display: inline-block;
+        padding: 0 0.5em;
+        line-height: 1.4;
+        font-size: 0.9em;
+      }
+
+      table {
+        border-spacing: 0;
+        margin-bottom: 1.5rem;
+      }
+
+      table th,
+      table td {
+        padding: 0.3em 0.7em;
+      }
+
+      table th {
+        background-color: #f4f4f4;
+        border-bottom: 2px solid #444;
+      }
+
+      table td {
+        border: 1px solid #f5f5f5;
+      }
+
+      /* Add transition to containers so they can push in and out. */
+
+      #layout,
+      #menu,
+      .menu-link {
+        -webkit-transition: all 0.2s ease-out;
+        -moz-transition: all 0.2s ease-out;
+        -ms-transition: all 0.2s ease-out;
+        -o-transition: all 0.2s ease-out;
+        transition: all 0.2s ease-out;
+      }
+
+      /* This is the parent `<div>` that contains the menu and the content area. */
+
+      #layout {
+        position: relative;
+        padding-left: 0;
+      }
+
+      #layout.active #menu {
+        left: 250px;
+        width: 250px;
+      }
+
+      #layout.active .menu-link {
+        left: 250px;
+      }
+
+      /* The content `<div>` is where all your content goes. */
+
+      .content {
+        margin: 50px auto;
+        padding: 0 2em;
+        max-width: 80ex;
+        line-height: 1.6em;
+      }
+
+      /*
+      The `#menu` `<div>` is the parent `<div>` that contains the menu that
+      appears on the left side of the page.
+      */
+
+      #menu {
+        margin-left: -250px;
+        /* "#menu" width */
+        width: 250px;
+        position: fixed;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        z-index: 1000;
+        /* so the menu or its navicon stays above all content */
+        background: #f4f4f4;
+        overflow-y: auto;
+        -webkit-overflow-scrolling: touch;
+        font-size: 0.9em;
+      }
+
+      @media print {
+        #menu,
+        .menu-link {
+          display: none !important;
+        }
+      }
+
+      a,
+      a * {
+        text-decoration: none;
+        color: #2483cc;
+      }
+
+      a:visited {
+        text-decoration: none;
+        color: #2483cc;
+      }
+
+      /* All anchors inside the menu should be styled like this. */
+
+      #menu a {
+        display: block;
+        padding: 0.5em 0.5em;
+      }
+
+      #menu a:first-letter {
+        text-transform: capitalize;
+      }
+
+      #menu ul {
+        list-style-type: none;
+        padding: 0;
+        margin: 1em 0.5em;
+      }
+
+      #menu ul ul {
+        margin-top: 0.5em;
+        margin-left: 0.5em;
+        border-left: 4px solid rgba(255, 255, 255, 0.5);
+      }
+
+      /* Change color of the anchor links on hover/focus. */
+
+      #menu li a:hover,
+      #menu li a:focus {
+        background: rgba(255, 255, 255, 0.4);
+      }
+
+      /* This styles the selected menu item `<li>`. */
+
+      #menu li a.active {
+        background: rgba(0, 0, 0, 0.05);
+      }
+
+      /* This styles a link within a selected menu item `<li>`. */
+
+      #menu li a.active {
+        color: #222;
+      }
+
+      /* This styles the menu heading. */
+
+      #menu li.heading {
+        font-size: 0.9em;
+        text-transform: uppercase;
+        color: #000;
+      }
+
+      #menu li.heading > * {
+        padding: 0.5em;
+        display: block;
+      }
+
+      #menu li.heading a {
+        color: #0c68af;
+      }
+
+      /* -- Dynamic Button For Responsive Menu -------------------------------------*/
+
+      /*
+      `.menu-link` represents the responsive menu toggle that shows/hides on
+      small screens.
+      */
+
+      .menu-link {
+        position: fixed;
+        display: block;
+        /* show this only on small screens */
+        top: 0;
+        left: 0;
+        /* "#menu width" */
+        font-size: 10px;
+        /* change this value to increase/decrease button size */
+        z-index: 10;
+        width: 2em;
+        height: auto;
+        padding: 1.6em 1.2em;
+        border-radius: 0 2px 2px 0;
+      }
+
+      .menu-link:hover {
+        background: #f4f4f4;
+      }
+
+      .menu-link span {
+        position: relative;
+        display: block;
+      }
+
+      .menu-link span,
+      .menu-link span:before,
+      .menu-link span:after {
+        background-color: #555;
+        width: 100%;
+        height: 0.2em;
+        border-radius: 1em;
+      }
+
+      .menu-link span:before,
+      .menu-link span:after {
+        position: absolute;
+        margin-top: -0.6em;
+        content: " ";
+      }
+
+      .menu-link span:after {
+        margin-top: 0.6em;
+      }
+
+      /* Hides the menu at `48em`, but modify this based on your app's needs. */
+
+      @media (min-width: 48em) {
+        .header,
+        .content {
+          padding-left: 2em;
+          padding-right: 2em;
+        }
+
+        #layout {
+          padding-left: 250px;
+          /* left col width "#menu" */
+          left: 0;
+        }
+        #menu {
+          left: 250px;
+        }
+
+        .menu-link {
+          position: fixed;
+          left: 250px;
+          display: none;
+        }
+
+        #layout.active .menu-link {
+          left: 250px;
+        }
+      }
+
+      @media (max-width: 48em) {
+        /* Only apply this when the window is small. Otherwise, the following case results in extra padding on the left:
+         * Make the window small.
+         * Tap the menu to trigger the active state.
+         * Make the window large again.
+         */
+        #layout.active {
+          position: relative;
+          left: 250px;
+        }
+      }
+
+      /* Heading anchors and permalinks */
+      h1[id],
+      h2[id],
+      h3[id],
+      h4[id],
+      h5[id],
+      h6[id] {
+        position: relative;
+      }
+      .heading-anchor-permalink {
+        /* Position the permalink to the left of the title */
+        position: absolute;
+        right: 100%;
+        /* Add some spacing as padding to not lose the hover */
+        padding-right: 0.6rem;
+        /* Make it only visible on heading hover, see below */
+        opacity: 0;
+      }
+      h1[id]:hover .heading-anchor-permalink,
+      h2[id]:hover .heading-anchor-permalink,
+      h3[id]:hover .heading-anchor-permalink,
+      h4[id]:hover .heading-anchor-permalink,
+      h5[id]:hover .heading-anchor-permalink,
+      h6[id]:hover .heading-anchor-permalink {
+        opacity: 0.5;
+      }
+    </style>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="utf-8" />
+  </head>
+
+  <body>
+    <div id="layout">
+      <!-- Menu toggle -->
+      <a href="#menu" id="menuLink" class="menu-link">
+        <!-- Hamburger icon -->
+        <span></span>
+      </a>
+      <nav id="menu">
+        <ul>
+<li><a class="" href="../../README.html">README</a></li>
+<li class="heading"><span>projects</span></li>
+<ul>
+<li class="heading"><span>markdown folder to html for blog</span></li>
+<ul>
+<li><a class="active" href="README.html">README</a></li>
+</ul>
+<li class="heading"><span>aws app runner and s3 with cloudfront</span></li>
+<ul>
+<li><a class="" href="../2-aws-app-runner-and-s3-with-cloudfront/README.html">README</a></li>
+</ul>
+<li class="heading"><span>sm0vpo 20m loop antenna</span></li>
+<ul>
+<li><a class="" href="../9-sm0vpo-20m-loop-antenna/README.html">README</a></li>
+</ul>
+</ul>
+<li class="heading"><span>templates</span></li>
+<ul>
+<li><a class="" href="../../templates/project_template.html">project template</a></li>
+</ul>
+</ul>
+      </nav>
+      <article id="main" class="content">
+        <!-- Each page should have a link to the previous page and (if applicable)the next page. -->
+<p><a href="../../README.html">Previous (Home)</a></p>
+<!-- Specify the project name, use Pascal Case with spaces. For example, "2M Ham Radio Amplifier". -->
+<h1 id="markdown-folder-to-html-for-blog">Markdown Folder to HTML for Blog <a class="heading-anchor-permalink" href="#markdown-folder-to-html-for-blog">#</a></h1>
+<p>A reusable workflow which can create docs-style html folder out of folder.</p>
+<!-- Short description of the project and what it is. -->
+<h2 id="abstract-and-introduction">Abstract and Introduction <a class="heading-anchor-permalink" href="#abstract-and-introduction">#</a></h2>
+<p>This project, which is available here <a href="https://github.com/joakin/markdown-folder-to-html">https://github.com/joakin/markdown-folder-to-html</a> could be used to make a html site for this whole repository. It would be a good way to organize the projects and make them easier to navigate. It would also be a good way to learn how to use the project.</p>
+<p>Being a core idea of this potential-projects-repo, it would be a good idea to use this project to create a html site for this repository. It would be a good way to learn how to use the project and also to make the projects easier to navigate.</p>
+<!-- Did the project live section start-->
+<h2 id="did-the-project-live%3F">Did the project live? <a class="heading-anchor-permalink" href="#did-the-project-live%3F">#</a></h2>
+<p>This whole website is described in this project. Some parts are currently up like GitHub pipelines but
+the whole site is not up yet. Part that is missing is rendering the markdown files into html files.</p>
+<h3 id="table-of-contents">Table of Contents <a class="heading-anchor-permalink" href="#table-of-contents">#</a></h3>
+<table>
+<thead>
+<tr>
+<th>Section</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="#abstract-and-introduction">Abstract and Introduction</a></td>
+</tr>
+<tr>
+<td><a href="#related-projects">Related Projects</a></td>
+</tr>
+<tr>
+<td><a href="#project-goals">Project Goals</a></td>
+</tr>
+<tr>
+<td><a href="#project-requirements">Project Requirements</a></td>
+</tr>
+<tr>
+<td><a href="#tags">Tags</a></td>
+</tr>
+<tr>
+<td><a href="#main">Main</a></td>
+</tr>
+<tr>
+<td><a href="#potential-cicd-pipelines-that-could-be-used">Potential CICD Pipelines that could be used</a></td>
+</tr>
+<tr>
+<td><a href="#issues-encountered">Issues encountered</a></td>
+</tr>
+<tr>
+<td><a href="#setting-up-the-cicd">Setting up the CICD</a></td>
+</tr>
+</tbody>
+</table>
+<!-- List the projects that could be related to this project. For example, if this project is a 2M Ham Radio Amplifier, then the related projects could be a 70cm Ham Radio Amplifier and a 6M Ham Radio Amplifier. -->
+<h3 id="related-projects">Related Projects <a class="heading-anchor-permalink" href="#related-projects">#</a></h3>
+<!-- List the goals of the project. For example, if this project is a 2M Ham Radio Amplifier, then the goals could be to build a 2M Ham Radio Amplifier that is capable of 100W output. -->
+<h3 id="project-goals">Project Goals <a class="heading-anchor-permalink" href="#project-goals">#</a></h3>
+<ul>
+<li>Create a html site for this repository using markdown-folder-to-html</li>
+<li>Create a script to automatically update the html site when a new project is added</li>
+<li>Host the html site on GitHub Pages or something cheap like S3</li>
+</ul>
+<!-- List the requirements of the project. For example, if this project is a 2M Ham Radio Amplifier, then the requirements could be W6PXL pallet, some coax, etc -->
+<h3 id="project-requirements">Project Requirements <a class="heading-anchor-permalink" href="#project-requirements">#</a></h3>
+<!-- Tags are used to categorize projects. For example, if this project is a 2M Ham Radio Amplifier, then the tags could be "Ham Radio", "Radio Engineering" -->
+<h4 id="tags">Tags <a class="heading-anchor-permalink" href="#tags">#</a></h4>
+<p>CICD, GitHub, Markdown, HTML, JavaScript, Node.js</p>
+<h2 id="main">Main <a class="heading-anchor-permalink" href="#main">#</a></h2>
+<p>Markdown to html docs would be useful(even for this page) to create a static HTML content out of folder full or markdown.
+It could be used to make simple blogs where users without huge amount of technical knowledge could just learn a bit of github and start writing.
+Advantage of a github way would also be ability to leverage all user permissions stuff and data flows that github offer, which could result in a system where articles would need to be approved, spelling checks on pull requests, etc.</p>
+<h3 id="potential-cicd-pipelines-that-could-be-used">Potential CICD Pipelines that could be used <a class="heading-anchor-permalink" href="#potential-cicd-pipelines-that-could-be-used">#</a></h3>
+<ul>
+<li>Spellcheck on creating pull request</li>
+<li>Creating appropriate folder structure on opening a new issue</li>
+<li>Automatically making a table of contents on the main landing page</li>
+</ul>
+<h3 id="issues-encountered">Issues encountered <a class="heading-anchor-permalink" href="#issues-encountered">#</a></h3>
+<h4 id="setting-up-the-cicd">Setting up the CICD <a class="heading-anchor-permalink" href="#setting-up-the-cicd">#</a></h4>
+<p>Took me a while to figure out that you need to specify the permissions for the <strong>GITHUB_SECRET</strong> key which is used to authenticate with your repository.</p>
+<p>I kept getting the following error:</p>
+<pre><code>Run git config user.name github-actions
+[main 1fc720e] Update root README with a new table of contents
+ 1 file changed, 3 insertions(+)
+remote: Permission to ivica3730k/potential-project-ideas.git denied to github-actions[bot].
+fatal: unable to access 'https://github.com/ivica3730k/potential-project-ideas/': The requested URL returned error: 403
+Error: Process completed with exit code 128.
+</code></pre>
+<p>It turns out that the solution was to add the following lines on top of the workflow file, granting the <strong>GITHUB_SECRET</strong> key the permission to write to the repository:</p>
+<pre><code class="language-yaml">permissions:
+  contents: write
+</code></pre>
+<p>The end result should look like this:</p>
+<pre><code class="language-yaml">name: Update Table of Contents on Push to Main
+
+permissions:
+  contents: write
+  
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  update-table-of-contents:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v3
+      with:
+        token: ${{ secrets.GITHUB_TOKEN }}
+
+    - name: Run Python Command
+      run: python3 migrate_table_of_contents.py
+
+    - name: Set up Git
+      run: |
+        git config user.name github-actions[bot]
+        git config user.email github-actions[bot]@users.noreply.github.com
+        git add README.md &amp;&amp; git commit -m &quot;Update root README with a new table of contents&quot;
+      
+    - name: Push changes
+      run: | 
+        git push origin main
+
+</code></pre>
+<p>Figuring this out took a while and I had to make a lot of commits to the repository to figure out what was wrong.
+<img src="54_commit_attempts.png" alt="Photo showing 54 github commits">.</p>
+
+      </article>
+    </div>
+    <script>
+      // Load contents.json if you need it
+    </script>
+    <script>
+      // FROM http://purecss.io/js/ui.js
+      (function(window, document) {
+        var layout = document.getElementById("layout"),
+          menu = document.getElementById("menu"),
+          menuLink = document.getElementById("menuLink");
+
+        function toggleClass(element, className) {
+          var classes = element.className.split(/\s+/),
+            length = classes.length,
+            i = 0;
+
+          for (; i < length; i++) {
+            if (classes[i] === className) {
+              classes.splice(i, 1);
+              break;
+            }
+          }
+          // The className is not found
+          if (length === classes.length) {
+            classes.push(className);
+          }
+
+          element.className = classes.join(" ");
+        }
+
+        menuLink.onclick = function(e) {
+          var active = "active";
+
+          e.preventDefault();
+          toggleClass(layout, active);
+          toggleClass(menu, active);
+          toggleClass(menuLink, active);
+        };
+      })(this, this.document);
+    </script>
+  </body>
+</html>
