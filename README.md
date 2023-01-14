@@ -12,5 +12,6 @@ Open a issue with connected branch for each project idea. Then use the template 
 | --- | --- |
 | [Markdown Folder to HTML for Blog](./projects/1-markdown-folder-to-html-for-blog/README.md) | A reusable workflow which can create docs-style html folder out of folder. |
 | [AWS App Runner and S3 + CloudFront Terraform Template](./projects/2-aws-app-runner-and-s3-with-cloudfront/README.md) | A template for deploying an AWS App Runner backend service with frontend hosted on S3 + CloudFront. |
+| [SM0VPO 20m Loop Antenna](./projects/9-sm0vpo-20m-loop-antenna/README.md) | 20M Band Loop Antenna based on the design by SM0VPO. |
 <!--Table of contents end, do not remove this comment -->
     
