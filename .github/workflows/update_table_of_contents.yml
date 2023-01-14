@@ -17,7 +17,7 @@ jobs:
     - name: Checkout code
       uses: actions/checkout@v3
       with:
-        token: ${{ secrets.PUSH_TOKEN }}
+        token: ${{ secrets.GITHUB_TOKEN }}
 
     - name: Run Python Command
       run: python3 migrate_table_of_contents.py
