@@ -20,9 +20,15 @@ jobs:
       run: node -v
     - name: Install dependencies
       run: npm install -g markdown-folder-to-html
-      
+
     - name: Build HTML
-      run: ./build_html.sh
+      run: |
+        mkdir html
+        cp -r . ./html || true
+        markdown-folder-to-html ./html
+        rm -rf ./html
+        mv _html html
+
 
     - name: Set up Git
       run: |
