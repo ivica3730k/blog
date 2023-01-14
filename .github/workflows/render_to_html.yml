@@ -24,9 +24,12 @@ jobs:
     - name: Make docs folder and move everything in there
       run: mkdir docs && mv * ./docs || true
       continue-on-error: true
+
+    - name: PWD and ls
+      run: pwd && ls
       
     - name: Render to HTML
-      run: markdown-folder-to-html docs
+      run: markdown-folder-to-html ./docs
     - name: Move everything out of the folder
       run: mv ./docs/* . && rm -rf ./docs
     - name: Rename docs folder to html
