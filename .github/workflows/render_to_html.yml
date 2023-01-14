@@ -7,7 +7,7 @@ on:
   push:
     branches:
       - main
-      
+
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -28,7 +28,8 @@ jobs:
       run: mv ./docs/* . && rm -rf ./docs
     - name: Rename docs folder to html
       run: mv ./docs ./html
-        - name: Set up Git
+      
+    - name: Set up Git
       run: |
         git config user.name github-actions[bot]
         git config user.email github-actions[bot]@users.noreply.github.com
