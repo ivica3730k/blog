@@ -21,16 +21,11 @@ jobs:
     - name: Install dependencies
       run: npm install -g markdown-folder-to-html
 
-    - name: pwd before going one folder back
-      run: pwd
-    
-    - name: Go one folder back and convert to html
-      run: |
-        cd ..
-        markdown-folder-to-html ./potential-projects-ideas
-        mv _potential-projects-ideas potential-projects-ideas
-        cd potential-projects-ideas
-        mv _potential-projects-ideas html
+    - name: Build HTML
+      run: markdown-folder-to-html $(pwd)
+
+    - name: Move build into the repo
+      run: mv ../_potential-project-ideas ./html
 
     - name: Set up Git
       run: |
