@@ -7,8 +7,7 @@ on:
   push:
     branches:
       - main
-
-
+      
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -21,3 +20,21 @@ jobs:
       run: node -v
     - name: Install dependencies
       run: npm install -g markdown-folder-to-html
+    - name: Move everything into a folder
+      run: mkdir -p ./docs && mv * ./docs
+    - name: Render to HTML
+      run: markdown-folder-to-html docs
+    - name: Move everything out of the folder
+      run: mv ./docs/* . && rm -rf ./docs
+    - name: Rename docs folder to html
+      run: mv ./docs ./html
+        - name: Set up Git
+      run: |
+        git config user.name github-actions[bot]
+        git config user.email github-actions[bot]@users.noreply.github.com
+        git add README.md && git commit -m "Rendered into HTML folder" || true
+      
+    - name: Push changes
+      run: | 
+        git push origin main || true
+    
