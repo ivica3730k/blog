@@ -20,6 +20,9 @@ jobs:
       run: node -v
     - name: Install dependencies
       run: npm install -g markdown-folder-to-html
+
+    - name: pwd before going one folder back
+      run: pwd
     
     - name: Go one folder back and convert to html
       run: |
