@@ -11,6 +11,11 @@ This project, which is available here https://github.com/joakin/markdown-folder-
 
 Being a core idea of this potential-projects-repo, it would be a good idea to use this project to create a html site for this repository. It would be a good way to learn how to use the project and also to make the projects easier to navigate.
 
+<!-- Did the project live section start-->
+## Did the project live?
+This whole website is described in this project. Some parts are currently up like GitHub pipelines but
+the whole site is not up yet. Part that is missing is rendering the markdown files into html files.
+
 ### Table of Contents
 | Section  |
 | ---  |
@@ -52,7 +57,7 @@ Advantage of a github way would also be ability to leverage all user permissions
 
 ### Issues encountered
 #### Setting up the CICD 
-Took me a while to figure out that you need to specify the permissionS for the **GITHUB_SECRET** key which is used to authenticate with your repository.
+Took me a while to figure out that you need to specify the permissions for the **GITHUB_SECRET** key which is used to authenticate with your repository.
 
 I kept getting the following error:
 ```
