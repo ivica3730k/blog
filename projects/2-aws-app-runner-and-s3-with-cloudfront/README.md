@@ -1,5 +1,5 @@
 <!-- Each page should have a link to the previous page and (if applicable)the next page. -->
-[Previous (page_name)](../README.md)
+[Previous (Home)](../../README.md)
 
 <!-- Specify the project name, use Pascal Case with spaces. For example, "2M Ham Radio Amplifier". -->
 # AWS App Runner and S3 + CloudFront Terraform Template
