@@ -2,7 +2,7 @@ name: Render to HTML
 
 permissions:
   contents: write
-  git@github.com:ivica3730k/potential-project-ideas.git
+
 on:
   push:
     branches:
