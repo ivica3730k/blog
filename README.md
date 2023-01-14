@@ -8,5 +8,8 @@ I like Markdown!
 Open a issue with connected branch for each project idea. Then use the template from templates to create a README.md file for the project. Put each project in a separate folder under projects directory. Then, create a pull request to merge the branch into master. Once the pull request is merged, the project should be added to the list below.
 
 # Table of Contents
+| Project | Description |
+| --- | --- |
+| [Markdown Folder to HTML for Blog](./projects/1-markdown-folder-to-html-for-blog/README.md) | A reusable workflow which can create docs-style html folder out of folder. |
 <!--Table of contents end, do not remove this comment -->
     
