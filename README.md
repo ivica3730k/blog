@@ -11,5 +11,6 @@ Open a issue with connected branch for each project idea. Then use the template 
 | Project | Description |
 | --- | --- |
 | [Markdown Folder to HTML for Blog](./projects/1-markdown-folder-to-html-for-blog/README.md) | A reusable workflow which can create docs-style html folder out of folder. |
+| [AWS App Runner and S3 + CloudFront Terraform Template](./projects/2-aws-app-runner-and-s3-with-cloudfront/README.md) | A template for deploying an AWS App Runner backend service with frontend hosted on S3 + CloudFront. |
 <!--Table of contents end, do not remove this comment -->
     
