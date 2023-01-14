@@ -36,11 +36,16 @@ jobs:
     - name: Rename _html folder to html
       run: mv _html html
 
+    - name: List all files including hidden ones
+      run: ls -a
+
     - name: Set up Git
       run: |
         git config user.name github-actions[bot]
         git config user.email github-actions[bot]@users.noreply.github.com
-        git add README.md && git commit -m "Rendered into HTML folder" || true
+
+    - name: Add changes and commit
+      git add . && git commit -m "Rendered into HTML folder" || true
       
     - name: Push changes
       run: | 
