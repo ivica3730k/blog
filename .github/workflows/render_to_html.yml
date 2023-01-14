@@ -1,0 +1,23 @@
+name: Render to HTML
+
+permissions:
+  contents: write
+  
+on:
+  push:
+    branches:
+      - main
+
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Use Node.js v16
+      uses: actions/setup-node@v1
+      with:
+        node-version: 16
+    - name: Check Node.js version
+      run: node -v
+    - name: Install dependencies
+      run: npm install -g markdown-folder-to-html
