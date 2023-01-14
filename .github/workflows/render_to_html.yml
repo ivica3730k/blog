@@ -2,7 +2,7 @@ name: Render to HTML
 
 permissions:
   contents: write
-  
+  git@github.com:ivica3730k/potential-project-ideas.git
 on:
   push:
     branches:
@@ -21,11 +21,20 @@ jobs:
     - name: Install dependencies
       run: npm install -g markdown-folder-to-html
 
-    - name: Build HTML
-      run: markdown-folder-to-html $(pwd)
+    - name: Install git
+      run: sudo apt-get install git -y
+    
+    - name: Clone repository into folder called html
+      run: git clone https://github.com/ivica3730k/potential-project-ideas.git html
 
-    - name: Move build into the repo
-      run: mv ../_potential-project-ideas ./html
+    - name: Render into HTML folder
+      run: markdown-folder-to-html html
+
+    - name: Remove html folder
+      run: rm -rf html
+
+    - name: Rename _html folder to html
+      run: mv _html html
 
     - name: Set up Git
       run: |
