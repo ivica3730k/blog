@@ -1,24 +1,34 @@
 name: Update Table of Contents on Push to Main
 
+permissions:
+  pull-requests: write
+  issues: write
+  repository-projects: write
+  contents: write
+  
 on:
   push:
     branches:
       - main
 
 jobs:
-  build:
-
+  update-table-of-contents:
     runs-on: ubuntu-latest
-
     steps:
     - name: Checkout code
-      uses: actions/checkout@v2
+      uses: actions/checkout@v3
+      with:
+        token: ${{ secrets.GITHUB_TOKEN }}
 
     - name: Run Python Command
       run: python3 migrate_table_of_contents.py
 
-    - name: Commit README
-      run: git add README.md && git commit -m "Update root README with a new table of contents"
-
+    - name: Set up Git
+      run: |
+        git config user.name github-actions[bot]
+        git config user.email github-actions[bot]@users.noreply.github.com
+        git add README.md && git commit -m "Update root README with a new table of contents"
+      
     - name: Push changes
-      run: git push origin main
+      run: | 
+        git push origin main
