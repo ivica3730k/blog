@@ -57,7 +57,7 @@ Advantage of a github way would also be ability to leverage all user permissions
 
 ### Issues encountered
 #### Setting up the CICD 
-Took me a while to figure out that you need to specify the permissionS for the **GITHUB_SECRET** key which is used to authenticate with your repository.
+Took me a while to figure out that you need to specify the permissions for the **GITHUB_SECRET** key which is used to authenticate with your repository.
 
 I kept getting the following error:
 ```

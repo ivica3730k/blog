@@ -6,7 +6,15 @@
         "readme",
         "readme",
         "markdown",
-        "md"
+        "md",
+        "html",
+        "repo",
+        "backend",
+        "frontend",
+        "AWS",
+        "Terraform",
+        "Docker"
+        
     ],
     "ignoreWords": [],
     "import": []
