@@ -5,6 +5,15 @@
 # AWS App Runner and S3 + CloudFront Terraform Template
 A template for deploying an AWS App Runner backend service with frontend hosted on S3 + CloudFront.
 
+### Table of Contents
+| Section  |
+| ---  |
+| [Abstract and Introduction](#abstract-and-introduction) | 
+| [Related Projects](#related-projects) | 
+| [Project Goals](#project-goals) | 
+| [Project Requirements](#project-requirements) | 
+| [Tags](#tags) | 
+
 <!-- Short description of the project and what it is. -->
 ## Abstract and Introduction
 Throughout my work I have been tasked numerous times to setup hosting for an Application which requires
@@ -32,14 +41,6 @@ If you are reading this, then the answer is no. I have not started working on th
 AWS, Terraform, App Runner, S3, CloudFront, Docker, Serverless
 ## Main
 
-### Table of Contents
-| Section  |
-| ---  |
-| [Abstract and Introduction](#abstract-and-introduction) | 
-| [Related Projects](#related-projects) | 
-| [Project Goals](#project-goals) | 
-| [Project Requirements](#project-requirements) | 
-| [Tags](#tags) | 
 
 ## A bit about technologies used
 **Disclaimer: Some sections of this might be written by GitHub Copilot and ChatGPT.

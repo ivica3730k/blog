@@ -3,6 +3,14 @@
 # Terraform With Github Actions
 Automate the deployment of infrastructure using Terraform and Github Actions.
 
+### Table of Contents
+| Section  |
+| ---  |
+| [Abstract and Introduction](#abstract-and-introduction) | 
+| [Table of Contents](#table-of-contents) |
+| [Main](#main) |
+| [Tags](#tags) | 
+
 <!-- Short description of the project and what it is. -->
 ## Abstract and Introduction
 This little project is a test to see if I can use Github Actions to deploy infrastructure using Terraform. I have been using Terraform for a while now, but I have not used Github Actions to deploy infrastructure. I have used Github Actions to deploy code, but not infrastructure. I am hoping that this project will help me learn how to use Github Actions to deploy infrastructure.
@@ -40,10 +48,3 @@ The YAML file includes several steps to accomplish these tasks, including checki
 
 The file includes environment variables for the Terraform command to run, which are sourced from the repository secrets. To use this action, you will need to change the branch names, environment name, and secrets names to match your repository's settings.
 
-### Table of Contents
-| Section  |
-| ---  |
-| [Abstract and Introduction](#abstract-and-introduction) | 
-| [Table of Contents](#table-of-contents) |
-| [Main](#main) |
-| [Tags](#tags) | 

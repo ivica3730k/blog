@@ -5,6 +5,15 @@
 # SM0VPO 20m Loop Antenna
 20M Band Loop Antenna based on the design by SM0VPO.
 
+### Table of Contents
+| Section  |
+| ---  |
+| [Abstract and Introduction](#abstract-and-introduction) | 
+| [Related Projects](#related-projects) | 
+| [Project Goals](#project-goals) | 
+| [Project Requirements](#project-requirements) | 
+| [Tags](#tags) | 
+
 <!-- Short description of the project and what it is. -->
 ## Abstract and Introduction
 Being a ham-radio operator and currently having RS918 HF transmitter I am in a need of appropriate antenna. I have been looking for a good antenna for a while and I have found a design by SM0VPO. 
@@ -32,14 +41,7 @@ Ham Radio, Radio Engineering, Antenna, Loop Antenna, 20M Band, SM0VPO, HF
 
 ## Main
 
-### Table of Contents
-| Section  |
-| ---  |
-| [Abstract and Introduction](#abstract-and-introduction) | 
-| [Related Projects](#related-projects) | 
-| [Project Goals](#project-goals) | 
-| [Project Requirements](#project-requirements) | 
-| [Tags](#tags) | 
+
 
 ## About Loop Antennas
 Ham radio loop antennas, also known as small transmit/receive (STL) antennas, are a popular choice among amateur radio operators. They are known for their compact size, low profile, and ability to reduce interference from nearby sources. The history of ham radio loop antennas dates back to the early days of radio communication, where they were primarily used for shortwave listening.

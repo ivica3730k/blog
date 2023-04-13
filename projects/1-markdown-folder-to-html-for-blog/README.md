@@ -5,18 +5,6 @@
 # Markdown Folder to HTML for Blog
 A reusable workflow which can create docs-style html folder out of folder.
 
-<!-- Short description of the project and what it is. -->
-## Abstract and Introduction
-This project, which is available here https://github.com/joakin/markdown-folder-to-html could be used to make a html site for this whole repository. It would be a good way to organize the projects and make them easier to navigate. It would also be a good way to learn how to use the project.
-
-Being a core idea of this potential-projects-repo, it would be a good idea to use this project to create a html site for this repository. It would be a good way to learn how to use the project and also to make the projects easier to navigate.
-
-<!-- Did the project live section start-->
-## Did the project live?
-This whole website is described in this project. ~~Some parts are currently up like GitHub pipelines but
-the whole site is not up yet. Part that is missing is rendering the markdown files into html files.~~
-If you are reading this, you will know it is up :) !!!
-
 ### Table of Contents
 | Section  |
 | ---  |
@@ -29,6 +17,19 @@ If you are reading this, you will know it is up :) !!!
 | [Potential CICD Pipelines that could be used](#potential-cicd-pipelines-that-could-be-used) |
 | [Issues encountered](#issues-encountered) |
 | [Setting up the CICD](#setting-up-the-cicd) |
+<!-- Short description of the project and what it is. -->
+## Abstract and Introduction
+This project, which is available here https://github.com/joakin/markdown-folder-to-html could be used to make a html site for this whole repository. It would be a good way to organize the projects and make them easier to navigate. It would also be a good way to learn how to use the project.
+
+Being a core idea of this potential-projects-repo, it would be a good idea to use this project to create a html site for this repository. It would be a good way to learn how to use the project and also to make the projects easier to navigate.
+
+<!-- Did the project live section start-->
+## Did the project live?
+This whole website is described in this project. ~~Some parts are currently up like GitHub pipelines but
+the whole site is not up yet. Part that is missing is rendering the markdown files into html files.~~
+If you are reading this, you will know it is up :) !!!
+
+
 
 <!-- List the projects that could be related to this project. For example, if this project is a 2M Ham Radio Amplifier, then the related projects could be a 70cm Ham Radio Amplifier and a 6M Ham Radio Amplifier. -->
 ### Related Projects
