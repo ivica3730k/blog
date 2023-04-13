@@ -10,10 +10,10 @@ jobs:
   update-table-of-contents:
     runs-on: ubuntu-latest
     steps:
-    - name: Checkout code
+    - name: Checkout
       uses: actions/checkout@v3
       with:
-        token: ${{ secrets.GITHUB_TOKEN }}
+        fetch-depth: 0
 
     - name: Run Python Command
       run: python3 migrate_table_of_contents.py

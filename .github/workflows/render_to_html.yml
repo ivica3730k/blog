@@ -10,10 +10,10 @@ jobs:
   render-to-html:
     runs-on: ubuntu-latest
     steps:
-    - name: Checkout code
+    - name: Checkout
       uses: actions/checkout@v3
       with:
-        token: ${{ secrets.GITHUB_TOKEN }}
+        fetch-depth: 0
 
     - name: Use Node.js v16
       uses: actions/setup-node@v1
