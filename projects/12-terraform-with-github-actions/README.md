@@ -1,5 +1,4 @@
-[Previous (page_name)](../README.md)
-
+[Previous (Home)](../../README.md)
 # Terraform With Github Actions
 Automate the deployment of infrastructure using Terraform and Github Actions.
 
