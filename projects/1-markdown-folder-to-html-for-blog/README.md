@@ -5,7 +5,7 @@
 # Markdown Folder to HTML for Blog
 A reusable workflow which can create docs-style html folder out of folder.
 
-### Table of Contents
+## Table of Contents
 | Section  |
 | ---  |
 | [Abstract and Introduction](#abstract-and-introduction) | 
