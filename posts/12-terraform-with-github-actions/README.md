@@ -16,7 +16,7 @@ This little project is a test to see if I can use Github Actions to deploy infra
 
 Note: main section was generated using ChatGPT
 
-<!-- Tags are used to categorize projects. For example, if this project is a 2M Ham Radio Amplifier, then the tags could be "Ham Radio", "Radio Engineering" -->
+<!-- Tags are used to categorize posts. For example, if this project is a 2M Ham Radio Amplifier, then the tags could be "Ham Radio", "Radio Engineering" -->
 #### Tags
 Terraform, Github Actions, Infrastructure, Automation
 ## Main

@@ -7,8 +7,8 @@ if __name__ == "__main__":
 | Project | Description |
 | --- | --- |
 """
-    for root, folder, file in os.walk("./projects/"):
-        if root == "./projects/":
+    for root, folder, file in os.walk("./posts/"):
+        if root == "./posts/":
             continue
         if file.count("README.md"):
             with open(os.path.join(root, "README.md")) as f:

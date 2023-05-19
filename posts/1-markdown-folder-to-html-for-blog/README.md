@@ -9,7 +9,7 @@ A reusable workflow which can create docs-style html folder out of folder.
 | Section  |
 | ---  |
 | [Abstract and Introduction](#abstract-and-introduction) | 
-| [Related Projects](#related-projects) | 
+| [Related posts](#related-posts) | 
 | [Project Goals](#project-goals) | 
 | [Project Requirements](#project-requirements) | 
 | [Tags](#tags) | 
@@ -19,9 +19,9 @@ A reusable workflow which can create docs-style html folder out of folder.
 | [Setting up the CICD](#setting-up-the-cicd) |
 <!-- Short description of the project and what it is. -->
 ## Abstract and Introduction
-This project, which is available here https://github.com/joakin/markdown-folder-to-html could be used to make a html site for this whole repository. It would be a good way to organize the projects and make them easier to navigate. It would also be a good way to learn how to use the project.
+This project, which is available here https://github.com/joakin/markdown-folder-to-html could be used to make a html site for this whole repository. It would be a good way to organize the posts and make them easier to navigate. It would also be a good way to learn how to use the project.
 
-Being a core idea of this potential-projects-repo, it would be a good idea to use this project to create a html site for this repository. It would be a good way to learn how to use the project and also to make the projects easier to navigate.
+Being a core idea of this potential-posts-repo, it would be a good idea to use this project to create a html site for this repository. It would be a good way to learn how to use the project and also to make the posts easier to navigate.
 
 <!-- Did the project live section start-->
 ## Did the project live?
@@ -31,8 +31,8 @@ If you are reading this, you will know it is up :) !!!
 
 
 
-<!-- List the projects that could be related to this project. For example, if this project is a 2M Ham Radio Amplifier, then the related projects could be a 70cm Ham Radio Amplifier and a 6M Ham Radio Amplifier. -->
-### Related Projects
+<!-- List the posts that could be related to this project. For example, if this project is a 2M Ham Radio Amplifier, then the related posts could be a 70cm Ham Radio Amplifier and a 6M Ham Radio Amplifier. -->
+### Related posts
 
 <!-- List the goals of the project. For example, if this project is a 2M Ham Radio Amplifier, then the goals could be to build a 2M Ham Radio Amplifier that is capable of 100W output. -->
 ### Project Goals
@@ -43,7 +43,7 @@ If you are reading this, you will know it is up :) !!!
 <!-- List the requirements of the project. For example, if this project is a 2M Ham Radio Amplifier, then the requirements could be W6PXL pallet, some coax, etc -->
 ### Project Requirements
 
-<!-- Tags are used to categorize projects. For example, if this project is a 2M Ham Radio Amplifier, then the tags could be "Ham Radio", "Radio Engineering" -->
+<!-- Tags are used to categorize posts. For example, if this project is a 2M Ham Radio Amplifier, then the tags could be "Ham Radio", "Radio Engineering" -->
 #### Tags
 CICD, GitHub, Markdown, HTML, JavaScript, Node.js
 ## Main
