@@ -2,6 +2,8 @@ name: Deploy changes on Push to Main
 
 permissions:
   contents: write
+  pages: write
+  id-token: write
 
 on:
   push:
