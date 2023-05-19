@@ -1,7 +1,7 @@
 <!-- Each page should have a link to the previous page and (if applicable)the next page. -->
 [Previous (Home)](../../README.md)
 
-<!-- Specify the project name, use Pascal Case with spaces. For example, "2M Ham Radio Amplifier". -->
+<!-- Specify the post name, use Pascal Case with spaces. For example, "2M Ham Radio Amplifier". -->
 # Markdown Folder to HTML for Blog
 A reusable workflow which can create docs-style html folder out of folder.
 
@@ -10,40 +10,40 @@ A reusable workflow which can create docs-style html folder out of folder.
 | ---  |
 | [Abstract and Introduction](#abstract-and-introduction) | 
 | [Related posts](#related-posts) | 
-| [Project Goals](#project-goals) | 
-| [Project Requirements](#project-requirements) | 
+| [Post Goals](#post-goals) | 
+| [Post Requirements](#post-requirements) | 
 | [Tags](#tags) | 
 | [Main](#main) |
 | [Potential CICD Pipelines that could be used](#potential-cicd-pipelines-that-could-be-used) |
 | [Issues encountered](#issues-encountered) |
 | [Setting up the CICD](#setting-up-the-cicd) |
-<!-- Short description of the project and what it is. -->
+<!-- Short description of the post and what it is. -->
 ## Abstract and Introduction
-This project, which is available here https://github.com/joakin/markdown-folder-to-html could be used to make a html site for this whole repository. It would be a good way to organize the posts and make them easier to navigate. It would also be a good way to learn how to use the project.
+This post, which is available here https://github.com/joakin/markdown-folder-to-html could be used to make a html site for this whole repository. It would be a good way to organize the posts and make them easier to navigate. It would also be a good way to learn how to use the post.
 
-Being a core idea of this potential-posts-repo, it would be a good idea to use this project to create a html site for this repository. It would be a good way to learn how to use the project and also to make the posts easier to navigate.
+Being a core idea of this potential-posts-repo, it would be a good idea to use this post to create a html site for this repository. It would be a good way to learn how to use the post and also to make the posts easier to navigate.
 
-<!-- Did the project live section start-->
-## Did the project live?
-This whole website is described in this project. ~~Some parts are currently up like GitHub pipelines but
+<!-- Did the post live section start-->
+## Did the post live?
+This whole website is described in this post. ~~Some parts are currently up like GitHub pipelines but
 the whole site is not up yet. Part that is missing is rendering the markdown files into html files.~~
 If you are reading this, you will know it is up :) !!!
 
 
 
-<!-- List the posts that could be related to this project. For example, if this project is a 2M Ham Radio Amplifier, then the related posts could be a 70cm Ham Radio Amplifier and a 6M Ham Radio Amplifier. -->
+<!-- List the posts that could be related to this post. For example, if this post is a 2M Ham Radio Amplifier, then the related posts could be a 70cm Ham Radio Amplifier and a 6M Ham Radio Amplifier. -->
 ### Related posts
 
-<!-- List the goals of the project. For example, if this project is a 2M Ham Radio Amplifier, then the goals could be to build a 2M Ham Radio Amplifier that is capable of 100W output. -->
-### Project Goals
+<!-- List the goals of the post. For example, if this post is a 2M Ham Radio Amplifier, then the goals could be to build a 2M Ham Radio Amplifier that is capable of 100W output. -->
+### Post Goals
 - Create a html site for this repository using markdown-folder-to-html
-- Create a script to automatically update the html site when a new project is added
+- Create a script to automatically update the html site when a new post is added
 - Host the html site on GitHub Pages or something cheap like S3
 
-<!-- List the requirements of the project. For example, if this project is a 2M Ham Radio Amplifier, then the requirements could be W6PXL pallet, some coax, etc -->
-### Project Requirements
+<!-- List the requirements of the post. For example, if this post is a 2M Ham Radio Amplifier, then the requirements could be W6PXL pallet, some coax, etc -->
+### Post Requirements
 
-<!-- Tags are used to categorize posts. For example, if this project is a 2M Ham Radio Amplifier, then the tags could be "Ham Radio", "Radio Engineering" -->
+<!-- Tags are used to categorize posts. For example, if this post is a 2M Ham Radio Amplifier, then the tags could be "Ham Radio", "Radio Engineering" -->
 #### Tags
 CICD, GitHub, Markdown, HTML, JavaScript, Node.js
 ## Main
@@ -66,8 +66,8 @@ I kept getting the following error:
 Run git config user.name github-actions
 [main 1fc720e] Update root README with a new table of contents
  1 file changed, 3 insertions(+)
-remote: Permission to ivica3730k/potential-project-ideas.git denied to github-actions[bot].
-fatal: unable to access 'https://github.com/ivica3730k/potential-project-ideas/': The requested URL returned error: 403
+remote: Permission to ivica3730k/potential-post-ideas.git denied to github-actions[bot].
+fatal: unable to access 'https://github.com/ivica3730k/potential-post-ideas/': The requested URL returned error: 403
 Error: Process completed with exit code 128.
 ```
 

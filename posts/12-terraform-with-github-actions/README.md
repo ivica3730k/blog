@@ -10,18 +10,18 @@ Automate the deployment of infrastructure using Terraform and Github Actions.
 | [Main](#main) |
 | [Tags](#tags) | 
 
-<!-- Short description of the project and what it is. -->
+<!-- Short description of the post and what it is. -->
 ## Abstract and Introduction
-This little project is a test to see if I can use Github Actions to deploy infrastructure using Terraform. I have been using Terraform for a while now, but I have not used Github Actions to deploy infrastructure. I have used Github Actions to deploy code, but not infrastructure. I am hoping that this project will help me learn how to use Github Actions to deploy infrastructure.
+This little post is a test to see if I can use Github Actions to deploy infrastructure using Terraform. I have been using Terraform for a while now, but I have not used Github Actions to deploy infrastructure. I have used Github Actions to deploy code, but not infrastructure. I am hoping that this post will help me learn how to use Github Actions to deploy infrastructure.
 
 Note: main section was generated using ChatGPT
 
-<!-- Tags are used to categorize posts. For example, if this project is a 2M Ham Radio Amplifier, then the tags could be "Ham Radio", "Radio Engineering" -->
+<!-- Tags are used to categorize posts. For example, if this post is a 2M Ham Radio Amplifier, then the tags could be "Ham Radio", "Radio Engineering" -->
 #### Tags
 Terraform, Github Actions, Infrastructure, Automation
 ## Main
-<!-- The main section is where the main content of the project goes. -->
-The project repo is available at https://github.com/ivica3730k/github-actions-terraform-azure
+<!-- The main section is where the main content of the post goes. -->
+The post repo is available at https://github.com/ivica3730k/github-actions-terraform-azure
 
 It consists of 2 main parts, github jobs for pull requests and github jobs for pushes to the branch.
 

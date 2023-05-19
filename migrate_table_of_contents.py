@@ -4,7 +4,7 @@ import sys
 if __name__ == "__main__":
     toc_table = """
 # Table of Contents
-| Project | Description |
+| Post | Description |
 | --- | --- |
 """
     for root, folder, file in os.walk("./posts/"):
