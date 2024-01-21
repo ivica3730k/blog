@@ -1,14 +1,17 @@
 [Previous (Home)](../../README.md)
+
 # Terraform With Github Actions
+
 Automate the deployment of infrastructure using Terraform and Github Actions.
 <br>
 This little post is a test to see if I can use Github Actions to deploy infrastructure using Terraform. I have been using Terraform for a while now, but I have not used Github Actions to deploy infrastructure. I have used Github Actions to deploy code, but not infrastructure. I am hoping that this post will help me learn how to use Github Actions to deploy infrastructure.
 
 Note: main section was generated using ChatGPT
 
-
 ## Main
+
 <!-- The main section is where the main content of the post goes. -->
+
 The post repo is available at https://github.com/ivica3730k/github-actions-terraform-azure
 
 It consists of 2 main parts, github jobs for pull requests and github jobs for pushes to the branch.

@@ -1,4 +1,10 @@
+<!-- Each page should have a link to the previous page and (if applicable)the next page. -->
+
+[Previous (Home)](../../README.md)
+
 # 49 to 1 EFHW Transformers
+
+Simple 49:1 EFHW Transformer build using a FT140-43 toroid
 
 Made some efhw transformers over the weekend.Case 3D Printed at Basingstoke Makerspace. Designed by IU1OPK
 
@@ -19,12 +25,13 @@ Deployment Options: EFHW antennas can be deployed in various configurations, suc
 Multi-Band Operation: EFHW antennas can be designed to work on multiple bands by incorporating additional resonant elements or using an antenna tuner capable of handling a wide impedance range. This versatility makes them great for covering several ham bands with a single antenna.
 
 ## Does it work
-![QRZ](qrz.png "")
+
+![QRZ](qrz.png)
 
 ## Some Photos
 
-![EFHW Construction](PXL_20230830_210137628.jpg "")
-![EFHW Construction](PXL_20230830_213025844.jpg "")
-![EFHW Construction](PXL_20230830_223945620.jpg "")
-![EFHW Construction](PXL_20230830_224240306.MP.jpg "")
-![EFHW Construction](antenna_outside.jpeg "")
+![EFHW Construction](PXL_20230830_210137628.jpg)
+![EFHW Construction](PXL_20230830_213025844.jpg)
+![EFHW Construction](PXL_20230830_223945620.jpg)
+![EFHW Construction](PXL_20230830_224240306.MP.jpg)
+![EFHW Construction](antenna_outside.jpeg)

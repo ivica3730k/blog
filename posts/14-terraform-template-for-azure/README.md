@@ -1,10 +1,16 @@
+<!-- Each page should have a link to the previous page and (if applicable)the next page. -->
+
+[Previous (Home)](../../README.md)
+
 # Terraform Template for Azure
+
+GitHub repository in a form of a template for creating a new Terraform project for interfacing with the Azure cloud.
 
 Working with cloud infrastructure programmatically can seem like a daunting task for many, but in todays world filled with various tools and frameworks, it does not really have to be. Terraform is one of the most popular tools for managing cloud infrastructure as code. It is a declarative language that allows you to define your infrastructure in a simple and easy to understand way.
 
 On the end of day, we are storing our code on the GitHub, we build it using Actions, so why wouldnt we do the same for our infrastructure? This repo is a simple template project used to initialize a new Terraform project on Github, with GitHub actions for interfacing with the Azure cloud.
 
-The github repository is available at: https://github.com/ivica3730k/azure-terraform-template 
+The github repository is available at: https://github.com/ivica3730k/azure-terraform-template
 
 Below is readme from the repo:
 
