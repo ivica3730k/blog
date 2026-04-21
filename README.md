@@ -13,10 +13,11 @@ I like Markdown!
 Open a issue with connected branch for each post idea. Then use the template from templates to create a README(dot)md file for the post. Put each post in a separate folder under posts directory. Then, create a pull request to merge the branch into master. Once the pull request is merged, the post should be added to the list below.
 
 # Table of Contents
-
-| Post                                                                                     | Description                                                                   |
-| ---------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------- |
-| [Terraform With Github Actions](./posts/12-terraform-with-github-actions/README.md)      | Automate the deployment of infrastructure using Terraform and Github Actions. |
-| [Markdown Folder to HTML for Blog](./posts/1-markdown-folder-to-html-for-blog/README.md) | A reusable workflow which can create docs-style html folder out of folder.    |
-
+| Post | Description |
+| --- | --- |
+| [Markdown Folder to HTML for Blog](./posts/1-markdown-folder-to-html-for-blog/README.md) |  |
+| [Terraform Template for Azure](./posts/14-terraform-template-for-azure/README.md) |  |
+| [Tips and Tricks for AKS on Azure](./posts/13-aks-tips-and-tricks/README.md) |  |
+| [49 to 1 EFHW Transformers](./posts/13-49-to-1-efhw/README.md) |  |
+| [Terraform With Github Actions](./posts/12-terraform-with-github-actions/README.md) |  |
 <!--Table of contents end, do not remove this comment -->
