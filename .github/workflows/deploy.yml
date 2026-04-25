@@ -15,17 +15,17 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
         with:
           fetch-depth: 0
 
       - name: Run Python Command
         run: python3 migrate_table_of_contents.py
 
-      - name: Use Node.js v16
-        uses: actions/setup-node@v1
+      - name: Use Node.js v20
+        uses: actions/setup-node@v4
         with:
-          node-version: 16.16.0
+          node-version: 20
 
       - name: Check Node.js version
         run: node -v
@@ -38,14 +38,14 @@ jobs:
         run: ./build_docs.sh
 
       - name: Setup Pages
-        uses: actions/configure-pages@v2
+        uses: actions/configure-pages@v5
 
       - name: Upload artifact
-        uses: actions/upload-pages-artifact@v1
+        uses: actions/upload-pages-artifact@v4
         with:
           # Upload entire repository
           path: 'html'
 
       - name: Deploy to GitHub Pages
         id: deployment
-        uses: actions/deploy-pages@v1
+        uses: actions/deploy-pages@v4
