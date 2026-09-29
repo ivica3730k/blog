@@ -106,6 +106,18 @@ Use `BatchSpanProcessor`, not `SimpleSpanProcessor`. The simple one exports sync
 
 **You can skip the exporter entirely.** A provider with no span processor still creates spans and still sets them as the current context — which is all the log handler needs. If you only want log correlation and don't care about the waterfall, drop the `add_span_processor` line and you're done: no export, no egress, no Cloud Trace bill.
 
+### Where the spans actually go
+
+`CloudTraceSpanExporter` uploads to the Cloud Trace API — `cloudtrace.googleapis.com` — in whichever project your credentials resolve to. Nothing leaves Google's network, and nothing is sent to a third party. You read them back in the console under Trace Explorer.
+
+Two practical consequences.
+
+**The service account needs permission to write.** Exporting requires `cloudtrace.traces.patch`, which comes with the `roles/cloudtrace.agent` role. Cloud Run's default service account generally has it; a locked-down custom one often does not, and the symptom is unhelpful — your app runs perfectly, logs correlate, and no traces ever appear.
+
+**You pay per span ingested.** At the time of writing that's $0.20 per million spans with 2.5 million free per billing account per month, and the traces Cloud Run generates by itself are free and don't count toward it. Check [the current pricing](https://cloud.google.com/products/observability/pricing) before assuming, and see [quotas and limits](https://docs.cloud.google.com/trace/docs/quotas) for retention, which is bounded and configurable rather than forever.
+
+This is the other reason the no-exporter mode is worth knowing about: it has no IAM requirement and no per-span cost at all.
+
 ## Step 3: sampling
 
 By default every trace is recorded and exported. On a service handling real traffic that is a lot of spans.
