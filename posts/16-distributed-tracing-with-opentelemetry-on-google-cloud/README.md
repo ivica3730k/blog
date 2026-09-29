@@ -119,9 +119,22 @@ provider = TracerProvider(
 )
 ```
 
-`ParentBased` is the important half. It means: if the incoming request already carries a sampling decision, respect it. Without it, each service samples independently and you get traces with holes in them — service A recorded, service B dropped, the waterfall missing its middle.
+`0.1` means one trace in ten, not one span in ten. A request producing forty spans is kept or dropped as a whole, and the decision is derived deterministically from the trace id — which is what "TraceIdRatio" refers to.
 
-The ratio applies only to traces that start at this service. Set it per service, and set it higher on the ones you actually debug.
+`ParentBased` is the important half. It means: if the incoming request already carries a sampling decision, respect it. Without it each service rolls its own dice, and at `0.1` across three services you'd keep roughly one complete trace in a thousand, plus a great many fragments.
+
+So the ratio only applies to traces that *start* at this service — in practice, the edge one. Set it per service and raise it on the ones you actually debug.
+
+**Sampling costs you the waterfall, not the log correlation.** This is the part that lets you sample aggressively without regret. An unsampled span is never recorded and never reaches Cloud Trace, but it still carries a valid trace id — and the log handler still stamps it onto every line:
+
+```
+is_recording: False
+logging.googleapis.com/trace        projects/my-project/traces/6173e8c24c06d11742cc21dd50f25bb4
+logging.googleapis.com/spanId       f72075a0693f2a03
+logging.googleapis.com/trace_sampled  false
+```
+
+So "show entries for this trace" works for **every** request, at any sampling ratio. What you give up on the other 99% is the timing waterfall, which is the expensive thing to store and the thing you need far less often.
 
 ## Step 4: the propagator
 
