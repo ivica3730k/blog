@@ -16,6 +16,7 @@ Open a issue with connected branch for each post idea. Then use the template fro
 | Post | Description |
 | --- | --- |
 | [Markdown Folder to HTML for Blog](./posts/1-markdown-folder-to-html-for-blog/README.md) |  |
+| [Trace correlation across services, and where Pub/Sub push breaks it](./posts/16-trace-correlation-across-services-and-where-pubsub-breaks-it/README.md) |  |
 | [Terraform With Github Actions](./posts/12-terraform-with-github-actions/README.md) |  |
 | [Tips and Tricks for AKS on Azure](./posts/13-aks-tips-and-tricks/README.md) |  |
 | [Why we can't have "SSO-first with admin-managed password accounts on Zitadel"](./posts/15-zitadel-limitations-for-username-password-and-sso-organisations/README.md) |  |
